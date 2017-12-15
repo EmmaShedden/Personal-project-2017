@@ -1,0 +1,9 @@
+requests
+BeautifulSoup4
+matplotlib
+nltk
+newspaper3k
+gunicorn
+flask
+pandas
+google.cloud.logging

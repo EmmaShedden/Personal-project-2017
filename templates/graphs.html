@@ -1,0 +1,131 @@
+
+<html>
+  <head>
+    <style>
+      body {
+      padding-left : 4%;
+      padding-right : 6%;
+      padding-top : 2%;
+      padding-bottom : 24px;
+      background-color : rgb(242, 243, 247);
+      }
+
+      .heading {
+      padding-left : 3%;
+      padding-top : 1%;
+      padding-bottom : 1%;
+      background-color : rgb(191, 252, 232);
+      border : rgb(191, 252, 232) ridge 12px;
+      border-radius : 5px;
+      }
+
+      .heading-format {
+      padding-bottom : 6%;
+      }
+
+      .left-margin {
+      display : table-cell;
+      width : 16%;
+      vertical-align : top;
+      }
+
+      .menu {
+      display : table;
+      float : left;
+      width : 80%;
+      height : 30%;
+      padding-left : 2%;
+      padding-right : 2%;
+      padding-top : 3%;
+      padding-bottom : 3%;
+      outline : black solid thick;
+      background-color : rgb(153, 247, 216);
+      }
+
+      .menu-item {
+      width : 100%;
+      display : td;
+      text-align : center;
+      vertical-align : middle;
+      padding-top : 12px;
+      padding-bottom : 12px;
+      }
+
+      .readable {
+      display : table;
+      width : 90%;
+      }
+
+      .content {
+      display : td;
+      float : right;
+      text-align : left;
+      width : 100%;
+      }
+
+      .colors {
+      width : 30%;
+      }
+
+      .color1 {
+      float : left;
+      color : rgb(237, 142, 9);
+      }
+
+      .color2 {
+      float : right;
+      color : blue;
+      }
+
+      .graph {
+      background-color : white;
+      text-align : center;
+      border : rgb(212, 213, 216) ridge 9px;
+      border-radius : 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class = "heading-format">
+      <div class = "heading">
+	<h1>Results</h1>
+      </div>
+    </div>
+    <div class = "readable">
+      <div class = "left-margin">
+	<div class = "menu">
+	  <div class = "menu-item">
+	    <a href = "query">Search</a>
+	  </div>
+	  <div class = "menu-item">
+	    <a href = "about?authuser=0#">About Us</a>
+	  </div>
+	  <div class = "menu-item">
+	    <a href = "graphs">See the code!</a>
+	  </div>
+	</div>
+      </div>
+      <div class = "content">
+	<p><b>Your URL: </b><a href = {{ url }}>{{ url }}</a></p>
+	<p><b>Sample text: </b><i>{{ text }}</i></p>
+	<p><b>ARI score: </b>{{ ari }}</p>
+	<p><b>Age (based on ARI): </b>{{ ari_age_range }}</p>
+	<p><b>Grade level (based on ARI): </b>{{ ari_grade_level }}</p>
+	<p><b>Sentiment/positivity*: </b>{{ sentiment }}</p>
+	<p><b>Average word length: </b>{{ avg_word_len }} letters</p>
+	<p><b>Average sentence length: </b>{{ avg_sent_len }} words</p>
+	<p><b>Total: </b>{{ total_words }} words, {{ total_sents }} sentences</p>
+	<p>*Sentiment is calculated by taking the difference between positive and negative words in the article and dividing by article length.  If sentiment is positive, then there are more positive than negative words in the article.</p>
+	<div class = "colors">
+	  <p class = "color1">Orange = fake news</p>
+	  <p class = "color2">Blue = real news</p>
+	</div>
+      </div>
+    </div>
+    <div class = "graph">
+      <img src = "{{ bpq }}" width : 100%>
+      <p>**Text scraped from a URL input may not be processed correctly.  To check your results, copy/paste the text from your article into the text box.</p>
+    </div>
+  </body>
+</html>
