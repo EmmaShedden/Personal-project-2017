@@ -102,7 +102,7 @@
 	    <a href = "about?authuser=0#">About Us</a>
 	  </div>
 	  <div class = "menu-item">
-	    <a href = "graphs">See the code!</a>
+	    <a href = "https://github.com/EmmaShedden/Personal-project-2017">See the code!</a>
 	  </div>
 	</div>
       </div>
@@ -112,9 +112,9 @@
 	<p><b>ARI score: </b>{{ ari }}</p>
 	<p><b>Age (based on ARI): </b>{{ ari_age_range }}</p>
 	<p><b>Grade level (based on ARI): </b>{{ ari_grade_level }}</p>
-	<p><b>Sentiment/positivity*: </b>{{ sentiment }}</p>
-	<p><b>Average word length: </b>{{ avg_word_len }} letters</p>
-	<p><b>Average sentence length: </b>{{ avg_sent_len }} words</p>
+	<p><b>Sentiment/positivity*: </b>{{ fmt_sentiment }}</p>
+	<p><b>Average word length: </b>{{ fmt_avg_word_len }} letters</p>
+	<p><b>Average sentence length: </b>{{ fmt_avg_sent_len }} words</p>
 	<p><b>Total: </b>{{ total_words }} words, {{ total_sents }} sentences</p>
 	<p>*Sentiment is calculated by taking the difference between positive and negative words in the article and dividing by article length.  If sentiment is positive, then there are more positive than negative words in the article.</p>
 	<div class = "colors">

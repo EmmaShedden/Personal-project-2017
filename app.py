@@ -89,8 +89,12 @@ def graphs():
 
     stats = find_stats(text)
 
-    
-
+    stats_fmt = {}
+    for k, v in stats.items():
+        if type(v) is float:
+            stats_fmt["fmt_" + k] = round(v, 1)
+    stats.update(stats_fmt)
+            
     bpq = "/boxplot?" + "&".join(["%s=%s" % (k, v) for k, v in stats.items()]) 
     
     return render_template("graphs.html", url = url, text = text[0:100], bpq=bpq, **stats)
