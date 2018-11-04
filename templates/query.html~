@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/query.css">
+  </head>
+
+  <body>
+    <div class = "heading">
+      <h1>Enter a news article below!</h1>
+    </div>
+    <!--copy out-->
+    <div class = "menu">
+      <div class = "menu-item">
+	<a href = "query">Search</a>
+      </div>
+      <div class = "menu-item">
+	<a href = "about?authuser=0#">About Us</a>
+      </div>
+      <div class = "menu-item">
+	<a href = "graphs">See the code!</a>
+      </div>
+    </div>
+    <div class = "readable">
+      <!--end copy-->
+      <h3><i>"Black words on a white page are the soul laid bare"</i>-- Guy de Maupassant</h3>
+      <br>
+      <br>
+      <form class = "textbox" method = "POST" action = "/graphs">
+	<label for = "url"><b>Enter url here : </b></label>
+	<input type = "text" name = "url" class = "for"/>
+	<p>--OR--</p>
+	<label for = "text"><b>Enter text here : </b></label>
+	<input type = "text" name = "text" class = "for"/>
+	<input type = "submit", style = "display:none"/>
+      </form>
+    </div>
+  </body>
+</html>

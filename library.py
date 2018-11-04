@@ -107,21 +107,14 @@ def np2t(url):
     if not url.startswith("http"):
         url = "http://" + url
     
-    try:
-        req = requests.get(url)
-    except e:
-        print(url)
-        raise e
+    req = requests.get(url)
     html = req.text
     
     art = newspaper.Article(url)
     art.download(input_html=html)
     time.sleep(1)
-    
-    try:
-        art.parse()
-    except newspaper.ArticleException as e:
-        raise(e)
+
+    art.parse()
     text = art.text
     return text
 
@@ -156,8 +149,11 @@ def find_stats(text):
     else:
         statistics["avg_sent_len"] = 0
 
-    ari = (4.71*(total_letters/total_words) + 0.5*(total_words/total_sents)
-           - 21.43)
+    try:
+        ari = (4.71*(total_letters/total_words) + 0.5*(total_words/total_sents) - 21.43)
+    except ZeroDivisionError:
+        ari = 1
+
     ari = ceil(ari)
     ari = max(ari, 1)
     ari = min(ari, 14)

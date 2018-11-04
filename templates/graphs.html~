@@ -99,23 +99,23 @@
 	    <a href = "query">Search</a>
 	  </div>
 	  <div class = "menu-item">
-	    <a href = "about?authuser=0#">About</a>
+	    <a href = "about?authuser=0#">About Us</a>
 	  </div>
 	  <div class = "menu-item">
-	    <a href = "https://github.com/EmmaShedden/Personal-project-2017">See the code!</a>
+	    <a href = "graphs">See the code!</a>
 	  </div>
 	</div>
       </div>
       <div class = "content">
-	<p><b>Your URL: </b><a href = {{ url }}>{{ url }}</a></p>
-	<p><b>Sample text: </b><i>{{ text }}</i></p>
-	<p><b>ARI score: </b>{{ ari }}</p>
-	<p><b>Age (based on ARI): </b>{{ ari_age_range }}</p>
-	<p><b>Grade level (based on ARI): </b>{{ ari_grade_level }}</p>
-	<p><b>Sentiment/positivity*: </b>{{ fmt_sentiment }}</p>
-	<p><b>Average word length: </b>{{ fmt_avg_word_len }} letters</p>
-	<p><b>Average sentence length: </b>{{ fmt_avg_sent_len }} words</p>
-	<p><b>Total: </b>{{ total_words }} words, {{ total_sents }} sentences</p>
+	<p>Your url: <a href = {{ url }}>{{ url }}</a></p>
+	<p>Sample text: {{ text }}</p>
+	<p>ARI score : {{ ari }}</p>
+	<p>Age (based on ARI) : {{ ari_age_range }}</p>
+	<p>Grade level (based on ARI) : {{ ari_grade_level }}</p>
+	<p>Sentiment/positivity* : {{ sentiment }}</p>
+	<p>Average word length : {{ avg_word_len }} letters</p>
+	<p>Average sentence length : {{ avg_sent_len }} words</p>
+	<p>Total : {{ total_words }} words, {{ total_sents }} sentences</p>
 	<p>*Sentiment is calculated by taking the difference between positive and negative words in the article and dividing by article length.  If sentiment is positive, then there are more positive than negative words in the article.</p>
 	<div class = "colors">
 	  <p class = "color1">Orange = fake news</p>
@@ -125,7 +125,7 @@
     </div>
     <div class = "graph">
       <img src = "{{ bpq }}" width : 100%>
-      <p>**Text scraped from a URL input may not be processed correctly.  To check your results, copy/paste the text from your article into the text box.</p>
+      <p>**Text scraped from a url input may not be processed correctly.  To check your results, copy/paste the text from your article into the text box.</p>
     </div>
   </body>
 </html>

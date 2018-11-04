@@ -1,0 +1,59 @@
+      body {
+      padding-top : 36px;
+      padding-bottom : 42px;
+      padding-right : 6%;
+      background-color : rgb(189, 252, 226);
+}
+
+      div.menu {
+      display : table;
+      float : left;
+      width : 10%;
+      padding-left : 2%;
+      padding-right : 2%;
+      padding-top : 3%;
+      padding-bottom : 3%;
+      outline : black solid thick;
+      background-color : rgb(153, 247, 216);
+      }
+
+            .menu-item {
+      width : 100%;
+      display : td;
+      text-align : center;
+      vertical-align : middle;
+      padding-top : 10px;
+      padding-bottom : 10px;
+	    }
+
+      .readable {
+      padding-top : 3%;
+      padding-left : 18%;
+      padding-right : 8%;
+      }
+
+            #heading {
+      background-color : rgb(66, 244, 191);
+      padding-left : 6%;
+      padding-top : 3%;
+      padding-bottom : 3%;
+      }
+
+	          #format1 {
+      padding-left : 5%;
+      padding-right : 5%;
+      }
+
+		        #main {
+      padding-left : 4%;
+      padding-right : 4%;
+      padding-bottom : 24px;
+      background-color : rgb(50, 229, 169);
+      }
+
+			      .para {
+      padding-left : 6%;
+      padding-right : 6%;
+      text-indent : 6%;
+      }
+	    

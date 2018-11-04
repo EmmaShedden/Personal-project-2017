@@ -5,7 +5,7 @@ import matplotlib as mpl
 mpl.use("Agg")
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
-from flask import Flask, render_template, request, make_response
+from flask import Flask, render_template, request, make_response, redirect, url_for
 from library import clean_html, find_stats, np2t
 
 # Connect newspaper logging to cloud
@@ -85,7 +85,10 @@ def graphs():
     url = request.form["url"]
     text = request.form["text"]
     if url != "":
-        text = np2t(url)
+        try:
+            text = np2t(url)
+        except:
+            return redirect(url_for("error"))
 
     stats = find_stats(text)
 
@@ -103,6 +106,17 @@ def graphs():
 @app.route('/query', methods = ["GET", "POST"])
 def query():
     return render_template("query.html")
+
+
+@app.route('/', methods = ["GET", "POST"])
+def home():
+    return redirect("https://personal-project-2017.appspot.com/query")
+
+
+@app.route('/error', methods = ["GET", "POST"])
+def error():
+    print("serving error")
+    return render_template("error.html")
 
 
 @app.route('/about', methods = ["GET", "POST"])

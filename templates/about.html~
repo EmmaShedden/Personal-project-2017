@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/about.css">
+  </head>
+
+  <body>
+    <h2 id = "heading"><b>About This Page</b></h2>
+    <div class = "menu">
+      <div class = "menu-item">
+	<a href = "query">Search</a>
+      </div>
+      <div class = "menu-item">
+	<a href = "about?authuser=0#">About Us</a>
+      </div>
+      <div class = "menu-item">
+	<a href = "graphs">See the code!</a>
+      </div>
+    </div>
+    <div class = "readable">
+      <div id = "format1">
+	<div id = "main">
+	  <br>
+	  <h3>Purpose:</h3>
+	  <p class = "para">This website provides a reference point to help the user determine the validity of a news article and was created for the use of students, teachers, and researchers.  The characteristics on which the article is judged largely pertain to the style and level of the writing rather than the content.  The website does not remember, save, or transmit the input text in any way.  This is <em><b>not a fake news detector</b></em> and should not be treated or relied upon as such.</p>
+	  <br>
+	  <h3>About the developer:</h3>
+	  <p class = "para">My name is Emma Shedden and I am a student at Ann Arbor Huron High school.  I created this website as my personal project, which is a requirement for all sophomores at the school.  The personal project is part of the IB curriculum which has been implemented at my school for the past few years.</p>
+	  <p class = "para">I have little prior experience coding, but I had a lot of help over the course of this 18-week project from my mentor, Prof. Kerby Shedden at U of M.  I hope to continue with CS through high school, college, and beyond, and I hope that others will do the same, no matter what social stigma gets thrown their way.</p>
+	</div>
+      </div>
+      <div id = "footnote">
+	<p>*snopes.com</p>
+      </div>
+    </div>
+  </body>
+</html>
